@@ -1,0 +1,808 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}height
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.main {
+    flex-grow: 1;
+}
+
+.main-section {
+    background-color: rgba(49, 51, 56, 1);
+}
+
+.header {
+    align-items: center;
+    background-color: rgba(49, 51, 56, 1);
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+    width: 100%;
+}
+
+.header__list {
+    display: flex;
+    flex-shrink: 1;
+    justify-content: space-between;
+    width: 472px;
+}
+
+.header__list-item {
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    line-height: 20px;
+}
+
+.header__phone {
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.header__submit-application_wrapper {
+    align-items: center;
+    background: rgba(255, 232, 12, 1);
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(233, 236, 239, 0.03), 8px 8px 35px rgba(233, 236, 239, 0.08), 15px 15px 100px rgba(233, 236, 239, 0.15);
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    width: 250px;
+}
+
+.header__submit-application_text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.company__title {
+    background: linear-gradient(178.13deg, white 74.1%, rgba(255, 255, 255, 0.5) 98.42%);
+    background-clip: text;
+    color: transparent;
+    font-family: 'Montserrat', sans-serif;
+    font-size: calc(29px + 23 * ((100vw - 1080px) / (1920 - 1080)));
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    line-height: 63px;
+    -webkit-background-clip: text;
+}
+
+.company__subtitle {
+    color: rgba(233, 236, 239, 1);
+    font-family: 'Montserrat', sans-serif;
+    font-size: calc(19px + 15 * ((100vw - 1080px) / (1920 - 1080)));
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    line-height: 34px;
+}
+
+.company__link_text {
+    color: rgba(16, 137, 255, 1);
+    font-family: 'Montserrat', sans-serif;
+    font-size: calc(13px + 11 * ((100vw - 1080px) / (1920 - 1080)));
+    font-style: normal;
+    font-weight: 800;
+    line-height: 29px;
+}
+
+.technologies {
+    background: rgba(233, 236, 239, 1);
+    column-gap: 90px;
+    display: grid;
+    grid-template: 
+        [start] "technologies__scheme technologies__info-block" auto [row-2]
+        [row-2] "technologies__scheme technologies__text-3" auto [row-3]
+        [row-4] "technologies__scheme technologies__possibilities" auto [row-end] / 213fr 713fr 713fr 280fr;
+    padding: 150px 10px;
+}
+
+.technologies__scheme {
+    align-self: center;
+    grid-area: technologies__scheme;
+    grid-column: 2 / 3;
+    justify-self: end;
+}
+
+.technologies__info-block {
+    align-self: start;
+    border-left: 8px solid rgba(16, 137, 255, 1);
+    box-sizing: border-box;
+    grid-area: technologies__info-block;
+    grid-column: 3 / 4;
+    justify-self: start;
+    margin-bottom: 50px;
+    padding-left: 40px;
+}
+
+.technologies__text-1 {
+    color: rgba(49, 51, 56, 1);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    line-height: 46px;
+}
+
+.technologies__text-2 {
+    color: rgba(49, 51, 56, 1);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    line-height: 29px;
+}
+
+.technologies__text-3 {
+    align-self: start;
+    color: rgba(49, 51, 56, 1);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    grid-area: technologies__text-3;
+    grid-column: 3 / 4;
+    justify-self: start;
+    letter-spacing: 0.02em;
+    line-height: 29px;
+    margin: 0 28px 78px 0;
+}
+
+.technologies__text-4 {
+    color: rgba(233, 236, 239, 1);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    line-height: 29px;
+}
+
+.technologies__possibilities {
+    background-color: rgba(49, 51, 56, 1);
+    border-radius: 20px;
+    box-shadow: 50px 79px 83px rgba(49, 51, 56, 0.1), 33px 52px 48px rgba(49, 51, 56, 0.08), 20px 30px 26px rgba(49, 51, 56, 0.06), 10px 15px 13px rgba(49, 51, 56, 0.05), 4px 6px 7px rgba(49, 51, 56, 0.04), 1px 2px 3px rgba(49, 51, 56, 0.02);
+    box-sizing: border-box;
+    grid-column: 3 / 4;
+    padding: 30px 40px;
+    width: 575px;
+}
+
+.technologies__clip {
+    margin-bottom: 20px;
+}
+
+.technologies__list-item {
+    align-items: center;
+    display: flex;
+    margin-top: 20px;
+}
+
+.technologies__list-item_text {
+    color: rgba(233, 236, 239, 1);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    line-height: 24px;
+    margin-left: 6px;
+}
+
+.form-price {
+    background-color: rgba(49, 51, 56, 1);
+    display: grid;
+    grid-template-columns: 28fr 104fr 28fr;
+    padding: 75px 0;
+}
+
+.form-price__grid-wrapper {
+    display: grid;
+    gap: 45px 45px;
+    grid-auto-flow: dense;
+    grid-column: 2 / 3;
+    grid-template: 
+    [start] "form-price__price-formation form-price__price-formation form-price__material form-price__geometry-difficulty" 1fr [row-2]
+    [row-2] "form-price__thikness form-price__square form-price__material form-price__calculate-exact-price" 1fr [row-end] / 1fr 1fr 1fr 1fr;
+}
+
+.form-price__price-formation {
+    background: linear-gradient(108.95deg, #1089FF 1.64%, rgba(16, 137, 255, 0.8) 97.44%);
+    border-radius: 20px;
+    box-shadow: 34px 48px 65px rgba(16, 137, 255, 0.04), 17px 25px 30px rgba(16, 137, 255, 0.03), 7px 10px 13px rgba(16, 137, 255, 0.02), 2px 3px 6px rgba(16, 137, 255, 0.01);
+    grid-area: form-price__price-formation;
+    padding: 40px 20px 20px 40px; 
+}
+
+.form-price__price-formation_title {
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    line-height: 46px;
+    margin-bottom: 30px;
+}
+
+.form-price__price-formation_text {
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    line-height: 29px;
+}
+
+.form-price__material {
+    background: rgba(233, 236, 239, 1);
+    background: rgba(233, 236, 239, 1);
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 40px 45px 96px rgba(233, 236, 239, 0.04), 20px 24px 45px rgba(233, 236, 239, 0.03), 8px 10px 20px rgba(233, 236, 239, 0.03), 2px 3px 9px rgba(233, 236, 239, 0.02);
+    grid-area: form-price__material;
+    padding: 40px 20px 20px 40px; 
+}
+
+.form-price__material_subtitle {
+    color: rgba(0, 0, 0, 1);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    line-height: 34px;
+    margin-bottom: 30px;
+}
+
+.form-price__material_list {
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    margin-bottom: 40px;
+    row-gap: 30px;
+}
+
+.form-price__material_list-item {
+    display: grid;
+    column-gap: 10px;
+    grid-template-columns: auto auto;
+    justify-content: start;
+}
+
+.form-price__material_list-item_text {
+    color: rgba(0, 0, 0, 1);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.form-price__material_text {
+    color: rgba(0, 0, 0, 1);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    line-height: 20px;
+}
+
+.form-price__geometry-difficulty {
+    background: rgba(233, 236, 239, 1);
+    border: 1px solid #000000;
+    border-radius: 20px;
+    box-shadow: 40px 45px 96px rgba(233, 236, 239, 0.04), 20px 24px 45px rgba(233, 236, 239, 0.03), 8px 10px 20px rgba(233, 236, 239, 0.03), 2px 3px 9px rgba(233, 236, 239, 0.02);
+    grid-area: form-price__geometry-difficulty;
+    padding: 40px 20px 20px 40px; 
+}
+
+.form-price__geometry-difficulty_subtitle {
+    color: rgba(0, 0, 0, 1);
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: 0.02em;
+    margin-bottom: 20px;
+}
+
+.form-price__geometry-difficulty_text {
+    color: rgba(49, 51, 56, 1);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    line-height: 20px;
+}
+
+.form-price__thikness {
+    background: rgba(233, 236, 239, 1);
+    border: 1px solid #000000;
+    border-radius: 20px;
+    box-shadow: 40px 45px 96px rgba(233, 236, 239, 0.04), 20px 24px 45px rgba(233, 236, 239, 0.03), 8px 10px 20px rgba(233, 236, 239, 0.03), 2px 3px 9px rgba(233, 236, 239, 0.02);
+    grid-area: form-price__thikness;
+    padding: 40px 20px 20px 40px; 
+}
+
+.form-price__thikness_subtitle {
+    color: rgba(49, 51, 56, 1);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    line-height: 34px;
+    margin-bottom: 20px;
+}
+
+.form-price__thikness_text {
+    color: rgba(49, 51, 56, 1);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    line-height: 20px;
+}
+
+.form-price__square {
+    background: rgba(233, 236, 239, 1);
+    border: 1px solid #000000;
+    border-radius: 20px;
+    box-shadow: 40px 45px 96px rgba(233, 236, 239, 0.04), 20px 24px 45px rgba(233, 236, 239, 0.03), 8px 10px 20px rgba(233, 236, 239, 0.03), 2px 3px 9px rgba(233, 236, 239, 0.02);
+    grid-area: form-price__square;
+    padding: 40px 20px 20px 40px; 
+}
+
+.form-price__square_subtitle {
+    color: rgba(49, 51, 56, 1);
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    letter-spacing: 0.02em;
+    line-height: 34px;
+    margin-bottom: 20px;
+}
+
+.form-price__square_text {
+    color: rgba(49, 51, 56, 1);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    line-height: 20px;
+}
+
+.form-price__calculate-exact-price {
+    background: #FFE80C;
+    border-radius: 30px;
+    grid-area: form-price__calculate-exact-price;
+    padding: 40px 40px 20px 40px; 
+}
+
+.form-price__calculate-exact-price_subtitle {
+    color: rgba(49, 51, 56, 1);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    line-height: 34px;
+    margin-bottom: 20px;
+}
+
+.form-price__calculate-exact-price_text {
+    color: rgba(49, 51, 56, 1);
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    line-height: 20px;
+    margin-bottom: 30px;
+}
+
+.form-price__calculate-exact-price_submit-application {
+    align-items: center;
+    background: rgba(49, 51, 56, 1);
+    border-radius: 10px;
+    column-gap: 20px;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: start;
+    padding: 15px 20px 15px 20px;
+}
+
+.form-price__calculate-exact-price_submit-application_text {
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    line-height: 20px;
+}
+
+.our-advantages {
+    background: rgba(49, 51, 56, 1);
+    padding: 158px 0 150px 0;
+}
+
+.our-advantages__advantages {
+    display: grid;
+    gap: 75px 0;
+    grid-template-columns: 1fr 1fr;
+}
+
+.our-advantages__advantage {
+    align-items: center;
+    column-gap: 30px;
+    display: grid;
+    grid-template: 
+        [start] "our-advantages__square-block our-advantages__info_short" auto [row-2]
+        [row-2] "our-advantages__square-block our-advantages__info" auto [row-end] / 1fr 5.6fr;
+}
+
+.our-advantages__title {
+    color: rgba(187, 249, 108, 1);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 52px;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    line-height: 63px;
+}
+
+.our-advantages__text {
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    line-height: 34px;
+}
+
+.our-advantages__square-block {
+    align-self: start;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 10px;
+    grid-area: our-advantages__square-block;
+    height: 100px;
+    justify-self: end;
+    width: 100px;
+}
+
+.our-advantages__info_short {
+    align-self: start;
+    color: rgba(233, 236, 239, 1);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 600;
+    grid-area: our-advantages__info_short;
+    justify-self: start;
+    letter-spacing: 0.05em;
+    line-height: 46px;
+}
+
+.our-advantages__info {
+    align-self: start;
+    color: rgba(233, 236, 239, 1);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    grid-area: our-advantages__info;
+    justify-self: start;
+    letter-spacing: 0.05em;
+    line-height: 29px;
+    word-wrap: break-word;
+}
+
+.submit-application {
+    background: rgba(233, 236, 239, 1);
+    display: grid;
+    grid-template:
+        [start] "submit-application__form submit-application__map-block" auto [row-2]
+        [row-2] "submit-application__info submit-application__info" auto [end] / 67fr 112fr minmax(10px, 38fr) 134fr 33fr;
+    row-gap: 100px;
+    padding: 150px 0 160px 0;
+}
+
+.submit-application__form {
+    align-items: start;
+    column-gap: 20px;
+    display: grid;
+    grid-area: submit-application__form;
+    grid-column: 2 / 2;
+    grid-template: 
+        [start] "submit-application__form__input_title submit-application__form__input_title" 17fr [row-2]
+        [row-2] "submit-application__form__input_text submit-application__form__input_text" 23fr [row-3]
+        [row-3] "submit-application__form__input_name submit-application__form__input_phone" 14fr [row-4]
+        [row-4] "submit-application__form__input_mail submit-application__form__input_mail" 14fr [row-5]
+        [row-5] "submit-application__form__input_application submit-application__form__input_application" 48fr [row-6]
+        [row-6] "submit-application__form__input_send submit-application__form__input_send" 10fr [end] / 1fr 1fr;
+    justify-content: start;
+}
+
+.submit-application__form__input_title {
+    color: rgba(49, 51, 56, 1);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 600;
+    grid-area: submit-application__form__input_title;
+    letter-spacing: 0.02em;
+    line-height: 46px;  
+}
+
+.submit-application__form__input_title::after {
+    background-color: rgba(16, 137, 255, 1);
+    content: "";
+    display: block;
+    height: 5px;
+    margin-top: 10px;
+    width: 160px;
+}
+
+.submit-application__form__input_text {
+    color: rgba(49, 51, 56, 1);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    grid-area: submit-application__form__input_text;
+    letter-spacing: 0.02em;
+    line-height: 29px;
+}
+
+.submit-application__form__input_name {
+    background: rgba(255, 255, 255, 1);
+    border: 0px;
+    border-radius: 10px;
+    color: rgba(49, 51, 56, 1);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    grid-area: submit-application__form__input_name;
+    letter-spacing: 0.05em;
+    line-height: 20px;
+    padding: 15px 20px;
+}
+
+.submit-application__form__input_phone {
+    background: rgba(255, 255, 255, 1);
+    border: 0px;
+    border-radius: 10px;
+    color: rgba(49, 51, 56, 1);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    grid-area: submit-application__form__input_phone;
+    letter-spacing: 0.05em;
+    line-height: 20px;
+    padding: 15px 20px;
+}
+
+.submit-application__form__input_mail {
+    background: rgba(255, 255, 255, 1);
+    border: 0px;
+    border-radius: 10px;
+    color: rgba(49, 51, 56, 1);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    grid-area: submit-application__form__input_mail;
+    letter-spacing: 0.05em;
+    line-height: 20px;
+    padding: 15px 20px;
+}
+
+.submit-application__form__input_application {
+    background: rgba(255, 255, 255, 1);
+    border: 0px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    color: rgba(49, 51, 56, 1);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    grid-area: submit-application__form__input_application;
+    height: calc(100% - 40px);
+    letter-spacing: 0.05em;
+    line-height: 20px;
+    padding: 15px 20px;
+    resize: none;
+}
+
+.submit-application__form__input_send {
+    background: rgba(16, 137, 255, 1);
+    border: 0px;
+    border-radius: 30px;
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    grid-area: submit-application__form__input_send;
+    height: 24xp;
+    justify-self: center;
+    line-height: 50px;
+    width: 250px;
+}
+
+.submit-application__map-block {
+    grid-area: submit-application__map-block;
+    grid-column: 4 / 4;
+}
+
+.submit-application__info {
+    display: grid;
+    grid-area: submit-application__info;
+    grid-column: 2 / 5;
+    grid-template-columns: repeat(3, auto);
+}
+
+.submit-application__contact {
+    display: grid;
+    gap: 10px 20px;
+    grid-template: 
+        [start] "submit-application__contact_icon submit-application__contact_text" auto [row-2]
+        [row-2] "submit-application__contact_icon submit-application__contact_subtext" auto [end] / 1fr 2fr;
+}
+
+.submit-application__contact_icon {
+    align-self: center;
+    grid-area: submit-application__contact_icon;
+    justify-self: end;
+}
+
+.submit-application__contact_text {
+    align-self: end;
+    color: rgba(49, 51, 56, 1);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    grid-area: submit-application__contact_text;
+    justify-self: start;
+    letter-spacing: 0.02em;
+    line-height: 29px;
+}
+
+.submit-application__contact_subtext {
+    align-self: start;
+    color: rgba(49, 51, 56, 1);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    grid-area: submit-application__contact_subtext;
+    justify-self: start;
+    letter-spacing: 0.05em;
+    line-height: 20px;
+}
+
+.footer {
+    align-items: center;
+    background-color: rgba(49, 51, 56, 1);
+    column-gap: 76px;
+    display: grid;
+    grid-template: 
+        [start] "footer__logo footer__company-name" auto [row-2]
+        [row-2] "footer__logo footer__copyright" auto [row-end] / 491fr 1353fr;
+    padding: 50px 0 55px 0;
+}
+
+.footer__logo {
+    grid-area: footer__logo;
+    justify-self: end;
+}
+
+.footer__company-name {
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    grid-area: footer__company-name;
+    letter-spacing: 0.02em;
+    line-height: 29px;
+}
+
+.footer__copyright {
+    grid-area: footer__copyright;
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    line-height: 22px;
+}
