@@ -23,11 +23,12 @@ public class MainControllers {
                               @RequestParam(value ="phone") String phone,
                               @RequestParam(value ="mail") String mail,
                               @RequestParam(value ="text") String text){
-
-        String mailText = name + "\n" +
-                          phone +"\n" +
-                          mail + "\n" + text;
-        emailService.sendEmailMessage(mailText);
-        System.out.println(123);
+        String test = name+phone+mail+text;
+        if(!test.equals("")) {
+            String mailText = name + "\n" +
+                              phone +"\n" +
+                              mail + "\n" + text;
+            emailService.sendEmailMessage(mailText);
+        }
         return "index";}
 }

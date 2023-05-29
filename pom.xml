@@ -61,7 +61,6 @@
 				</configuration>
 			</plugin>
 		</plugins>
-		<finalName>Dynamics</finalName>
 	</build>
 
 </project>

@@ -78,7 +78,7 @@ body {
     align-items: center;
     background-color: rgba(49, 51, 56, 1);
     display: grid;
-    grid-template-columns: minmax(10px, 14fr) 18fr minmax(10px, 7.5fr) 44fr minmax(10px, 37.5fr) 15.5fr minmax(10px, 10.5fr) 20fr minmax(10px, 14fr);
+    grid-template-columns: minmax(10px, 14fr) 18fr minmax(10px, 7.5fr) 44fr minmax(10px, 7.5fr) 15.5fr minmax(10px, 5.5fr) 20fr minmax(10px, 14fr);
     justify-items: center;
     padding: 15px 0;
     width: 100%;
@@ -187,6 +187,7 @@ body {
 .company__images {
     grid-area: company__images;
     height: 654px;
+    width: 496px;
     position: relative;
 }
 
@@ -375,7 +376,69 @@ body {
     font-weight: 500;
     letter-spacing: 0.05em;
     line-height: 24px;
-    margin-left: 6px;
+}
+
+.coating-types {
+    background: rgba(183, 183, 184, 1);
+    display: grid;
+    grid-template-columns: 28fr 136fr 28fr;
+    grid-template-rows: auto auto;
+    justify-items: center;
+    padding: 200px 0 210px 0;
+}
+
+.coating-types__title {
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 600;
+    grid-column: 2 / 2;
+    line-height: 46px;
+    letter-spacing: 0.02em;
+    margin-bottom: 120px;
+}
+
+.coating-types__types {
+    display: grid;
+    gap: 105px 85px;
+    grid-column: 2 / 2;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+}
+
+.coating-types__types__type {
+    align-items: center;
+    column-gap: 45px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 1fr;
+}
+
+.coating-types__types__type__info {
+    display: grid;
+    grid-template-rows: auto auto;
+    row-gap: 20px;
+}
+
+.coating-types__types__type__info_short {
+    color: rgba(49, 51, 56, 1);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    line-height: 29px;
+}
+
+.coating-types__types__type__info_long {
+    color: rgba(49, 51, 56, 1);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    line-height: 20px;
 }
 
 .form-price {
@@ -647,13 +710,6 @@ body {
     -webkit-background-clip: text;
 }
 
-.our-advantages__advantage_square-block {
-    background: white;
-    border-radius: 10px;
-    box-shadow: 19px 28px 35px rgba(233, 236, 239, 0.06), 10px 14px 18px rgba(233, 236, 239, 0.05), 4.00107px 6px 9px rgba(233, 236, 239, 0.04), 1px 1px 4px rgba(233, 236, 239, 0.03);
-    height: 120px;
-    width: 120px;
-}
 
 .our-advantages__advantages_wrapper {
     display: grid;
@@ -673,6 +729,16 @@ body {
     column-gap: 45px;
     display: grid;
     grid-template-columns: auto auto;
+}
+
+.our-advantages__advantage_square-block {
+    background: white;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 19px 28px 35px rgba(233, 236, 239, 0.06), 10px 14px 18px rgba(233, 236, 239, 0.05), 4.00107px 6px 9px rgba(233, 236, 239, 0.04), 1px 1px 4px rgba(233, 236, 239, 0.03);
+    height: 120px;
+    padding: 25px;
+    width: 120px;
 }
 
 .our-advantages__advantage__info_short {
