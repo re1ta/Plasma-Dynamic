@@ -19,7 +19,7 @@ public class EmailService  {
     public void sendEmailMessage(String text){
         Properties properties = new Properties();
         String from = "ernest.ibatov@mail.ru";
-        String to = "ernest.ibatov@mail.ru";
+        String to = "thermalspray@mail.ru";
         properties.put("mail.smtp.host","smtp.mail.ru");
         properties.put("mail.smtp.post","465");
         properties.put("mail.smtp.ssl.enable","true");

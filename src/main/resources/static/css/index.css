@@ -16,6 +16,7 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
+    scroll-behavior: smooth;
 	vertical-align: baseline;
 }
 
@@ -76,27 +77,36 @@ body {
 .header {
     align-items: center;
     background-color: rgba(49, 51, 56, 1);
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: minmax(10px, 14fr) 18fr minmax(10px, 7.5fr) 44fr minmax(10px, 37.5fr) 15.5fr minmax(10px, 10.5fr) 20fr minmax(10px, 14fr);
+    justify-items: center;
     padding: 15px 0;
     width: 100%;
 }
 
+.header__logo {
+    grid-column: 2 / 2;
+}
+
+.header__menu {
+    grid-column: 4 / 4;
+}
+
 .header__list {
-    display: flex;
-    flex-shrink: 1;
-    justify-content: space-between;
-    width: 472px;
+    display: grid;
+    column-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
 }
 
 .header__list-item {
-    color: rgba(255, 255, 255, 1);
+    color: rgba(255, 255, 255, 0.8);
     font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 600;
     letter-spacing: 0.05em;
-    line-height: 20px;
+    line-height: 24px;
 }
 
 .header__phone {
@@ -104,133 +114,214 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
+    grid-column: 6 / 6;
+    letter-spacing: 0.05em;
     line-height: 20px;
 }
 
-.header__submit-application_wrapper {
-    align-items: center;
-    background: rgba(255, 232, 12, 1);
-    border-radius: 10px;
-    box-shadow: 3px 3px 10px rgba(233, 236, 239, 0.03), 8px 8px 35px rgba(233, 236, 239, 0.08), 15px 15px 100px rgba(233, 236, 239, 0.15);
-    display: flex;
-    height: 50px;
-    justify-content: center;
-    width: 250px;
+.header__submit-application {
+    background: #1089FF;
+    border-radius: 30px;
+    box-shadow: 3px 3px 10px rgba(16, 137, 255, 0.03), 8px 8px 35px rgba(16, 137, 255, 0.08), 15px 15px 100px rgba(16, 137, 255, 0.15);
+    font-size: 15px;
+    grid-column: 8 / 8;
+    padding: 20px 30px;
+    transition: font-size 1s ease 0.5s;
+}
+
+.header__submit-application:hover {
+    font-size: 18px;
+    transition: all 1s ease 0.5s;
 }
 
 .header__submit-application_text {
+    color: rgba(255, 255, 255, 1);
     font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
+    font-size: inherit;
     font-style: normal;
     font-weight: 600;
-    line-height: 24px;
+    letter-spacing: 0.05em;
+    line-height: 18px;
 }
 
-.company__title {
-    background: linear-gradient(178.13deg, white 74.1%, rgba(255, 255, 255, 0.5) 98.42%);
+.company {
+    align-items: center;
+    background: rgba(49, 51, 56, 1);
+    display: grid;
+    grid-template:
+        [start] ". company__title-subtitle . company__images ." auto [row-2]
+        [row-2] ". company__companies company__companies company__companies ." auto [end] / minmax(10px, 28fr) 65fr minmax(10px, 18fr) 47fr minmax(10px, 28fr); 
+    row-gap: 80px;
+}
+
+.company__title-subtitle {
+    grid-area: company__title-subtitle;
+}
+
+.company__title-subtitle_title {
+    background: linear-gradient(178.13deg, #FFFFFF 74.1%, rgba(255, 255, 255, 0.5) 98.42%);
+    background-blend-mode: hard-light;
     background-clip: text;
-    color: transparent;
     font-family: 'Montserrat', sans-serif;
-    font-size: calc(29px + 23 * ((100vw - 1080px) / (1920 - 1080)));
+    font-size: 52px;
     font-style: normal;
     font-weight: 600;
     letter-spacing: 0.02em;
     line-height: 63px;
+    margin-bottom: 40px;
     -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.company__subtitle {
-    color: rgba(233, 236, 239, 1);
+.company__title-subtitle_subtitle {
+    color: rgba(255, 255, 255, 0.8);
     font-family: 'Montserrat', sans-serif;
-    font-size: calc(19px + 15 * ((100vw - 1080px) / (1920 - 1080)));
+    font-size: 28px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 0.02em;
     line-height: 34px;
 }
 
-.company__link_text {
-    color: rgba(16, 137, 255, 1);
-    font-family: 'Montserrat', sans-serif;
-    font-size: calc(13px + 11 * ((100vw - 1080px) / (1920 - 1080)));
-    font-style: normal;
-    font-weight: 800;
-    line-height: 29px;
+.company__images {
+    grid-area: company__images;
+    height: 654px;
+    position: relative;
+}
+
+.company__images__wrapper-1 {
+    background: rgba(16, 137, 255, 1);
+    border-radius: 20px;
+    height: 215px;
+    position: absolute;
+    right: 70px;
+    top: 4px;
+    width: 180px;
+}
+
+.company__images__wrapper-2 {
+    background: rgba(16, 137, 255, 1);
+    border-radius: 20px;
+    height: 190px;
+    left: 0;
+    position: absolute;
+    top: 270px;
+    width: 235px;
+}
+
+.company__images__wrapper-3 {
+    background: rgba(16, 137, 255, 1);
+    border-radius: 20px;
+    bottom: 0;
+    height: 235px;
+    position: absolute;
+    right: 0;
+    width: 215px;
+}
+
+.company__images__wrapper-1_image {
+    border-radius: 20px;
+    height: 315px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 250px;
+    z-index: 2;
+}
+
+.company__images__wrapper-2_image {
+    border-radius: 20px;
+    height: 210px;
+    left: 10px;
+    position: absolute;
+    top: 10px;
+    width: 270px;
+    z-index: 1;
+}
+
+.company__images__wrapper-3_image {
+    border-radius: 20px;
+    bottom: 10px;
+    height: 315px;
+    left: 10px;
+    position: absolute;
+    width: 250px;
+    z-index: 1;
+}
+
+.company__companies {
+    display: grid;
+    grid-area: company__companies;
+    grid-template-columns: repeat(5, auto);
+    justify-content: space-between;
+    margin-bottom: 115px;
+}
+
+.company__companies__partner_first {
+    margin-right: 10px;
+}
+
+.company__companies__partner {
+    margin: 0 10px;
+}
+
+.company__companies__partner_last {
+    margin-left: 10px;
 }
 
 .technologies {
-    background: rgba(233, 236, 239, 1);
-    column-gap: 90px;
+    background: url(../static/images/scheme.png) center / cover;
     display: grid;
     grid-template: 
-        [start] "technologies__scheme technologies__info-block" auto [row-2]
-        [row-2] "technologies__scheme technologies__text-3" auto [row-3]
-        [row-4] "technologies__scheme technologies__possibilities" auto [row-end] / 213fr 713fr 713fr 280fr;
-    padding: 150px 10px;
-}
-
-.technologies__scheme {
-    align-self: center;
-    grid-area: technologies__scheme;
-    grid-column: 2 / 3;
-    justify-self: end;
+        ". technologies__info-block ." auto
+        ". technologies__text-1 ." auto
+        ". technologies__possibilities ." auto / minmax(10px, 28fr) 136fr minmax(10px, 28fr);
 }
 
 .technologies__info-block {
-    align-self: start;
     border-left: 8px solid rgba(16, 137, 255, 1);
-    box-sizing: border-box;
     grid-area: technologies__info-block;
-    grid-column: 3 / 4;
-    justify-self: start;
-    margin-bottom: 50px;
-    padding-left: 40px;
+    padding: 0 10px 0 40px;
+    margin-bottom: 30px;
+    max-width: 650px;
+    margin-top: 150px;
+}
+
+.technologies__info-block_title {
+    color: rgba(0, 0, 0, 1);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 600;
+    grid-area: technologies__title;
+    letter-spacing: 0.02em;
+    line-height: 46px;
+    margin-bottom: 20px;
+}
+
+.technologies__info-block_subtitle {
+    color: rgba(49, 51, 56, 1);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    grid-area: technologies__subtitle;
+    letter-spacing: 0.02em;
+    line-height: 29px;
 }
 
 .technologies__text-1 {
     color: rgba(49, 51, 56, 1);
     font-family: 'Montserrat', sans-serif;
-    font-size: 38px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 600;
+    grid-area: technologies__text-1;
     letter-spacing: 0.02em;
-    line-height: 46px;
-}
-
-.technologies__text-2 {
-    color: rgba(49, 51, 56, 1);
-    font-family: 'Montserrat', sans-serif;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 600;
-    letter-spacing: 0.02em;
-    line-height: 29px;
-}
-
-.technologies__text-3 {
-    align-self: start;
-    color: rgba(49, 51, 56, 1);
-    font-family: 'Montserrat', sans-serif;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 500;
-    grid-area: technologies__text-3;
-    grid-column: 3 / 4;
-    justify-self: start;
-    letter-spacing: 0.02em;
-    line-height: 29px;
-    margin: 0 28px 78px 0;
-}
-
-.technologies__text-4 {
-    color: rgba(233, 236, 239, 1);
-    font-family: 'Montserrat', sans-serif;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    line-height: 29px;
+    line-height: 24px;
+    margin: 0 0 935px 40px;
+    max-width: 500px;
 }
 
 .technologies__possibilities {
@@ -238,13 +329,36 @@ body {
     border-radius: 20px;
     box-shadow: 50px 79px 83px rgba(49, 51, 56, 0.1), 33px 52px 48px rgba(49, 51, 56, 0.08), 20px 30px 26px rgba(49, 51, 56, 0.06), 10px 15px 13px rgba(49, 51, 56, 0.05), 4px 6px 7px rgba(49, 51, 56, 0.04), 1px 2px 3px rgba(49, 51, 56, 0.02);
     box-sizing: border-box;
-    grid-column: 3 / 4;
-    padding: 30px 40px;
-    width: 575px;
+    grid-area: technologies__possibilities;
+    margin-bottom: 100px;
+    padding: 30px 50px 50px 50px;
+}
+
+.technologies__possibilities__block-title {
+    display: grid;
+    grid-template-columns: 50px 50px 1fr;
+    margin-bottom: 40px;
+}
+
+.technologies__possibilities_text {
+    color: rgba(233, 236, 239, 1);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    line-height: 29px;
+    margin-left: 40px;
 }
 
 .technologies__clip {
-    margin-bottom: 20px;
+    height: 50px;
+    width: 50px;
+}
+
+.technologies__list {
+    display: flex;
+    justify-content: space-between;
 }
 
 .technologies__list-item {
@@ -267,13 +381,13 @@ body {
 .form-price {
     background-color: rgba(49, 51, 56, 1);
     display: grid;
-    grid-template-columns: 28fr 104fr 28fr;
-    padding: 75px 0;
+    grid-template-columns: 28fr 136fr 28fr;
+    padding: 150px 0;
 }
 
 .form-price__grid-wrapper {
     display: grid;
-    gap: 45px 45px;
+    gap: 40px 40px;
     grid-auto-flow: dense;
     grid-column: 2 / 3;
     grid-template: 
@@ -286,7 +400,7 @@ body {
     border-radius: 20px;
     box-shadow: 34px 48px 65px rgba(16, 137, 255, 0.04), 17px 25px 30px rgba(16, 137, 255, 0.03), 7px 10px 13px rgba(16, 137, 255, 0.02), 2px 3px 6px rgba(16, 137, 255, 0.01);
     grid-area: form-price__price-formation;
-    padding: 40px 20px 20px 40px; 
+    padding: 40px 15px 40px 40px;
 }
 
 .form-price__price-formation_title {
@@ -317,7 +431,7 @@ body {
     border-radius: 20px;
     box-shadow: 40px 45px 96px rgba(233, 236, 239, 0.04), 20px 24px 45px rgba(233, 236, 239, 0.03), 8px 10px 20px rgba(233, 236, 239, 0.03), 2px 3px 9px rgba(233, 236, 239, 0.02);
     grid-area: form-price__material;
-    padding: 40px 20px 20px 40px; 
+    padding: 40px 15px 40px 40px;
 }
 
 .form-price__material_subtitle {
@@ -334,24 +448,31 @@ body {
 .form-price__material_list {
     display: grid;
     grid-template-rows: repeat(5, 1fr);
-    margin-bottom: 40px;
     row-gap: 30px;
+    margin-bottom: 50px;
 }
 
 .form-price__material_list-item {
+    align-items: center;
     display: grid;
     column-gap: 10px;
     grid-template-columns: auto auto;
     justify-content: start;
 }
 
+.form-price__material_list-item_bullet {
+    height: 20px;
+    width: 20px;
+}
+
 .form-price__material_list-item_text {
     color: rgba(0, 0, 0, 1);
     font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
+    font-size: 16px;
     font-style: normal;
-    font-weight: 600;
-    line-height: 24px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    line-height: 20px;
 }
 
 .form-price__material_text {
@@ -370,7 +491,7 @@ body {
     border-radius: 20px;
     box-shadow: 40px 45px 96px rgba(233, 236, 239, 0.04), 20px 24px 45px rgba(233, 236, 239, 0.03), 8px 10px 20px rgba(233, 236, 239, 0.03), 2px 3px 9px rgba(233, 236, 239, 0.02);
     grid-area: form-price__geometry-difficulty;
-    padding: 40px 20px 20px 40px; 
+    padding: 40px 15px 40px 40px;
 }
 
 .form-price__geometry-difficulty_subtitle {
@@ -381,7 +502,7 @@ body {
     font-size: 28px;
     line-height: 34px;
     letter-spacing: 0.02em;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .form-price__geometry-difficulty_text {
@@ -400,7 +521,7 @@ body {
     border-radius: 20px;
     box-shadow: 40px 45px 96px rgba(233, 236, 239, 0.04), 20px 24px 45px rgba(233, 236, 239, 0.03), 8px 10px 20px rgba(233, 236, 239, 0.03), 2px 3px 9px rgba(233, 236, 239, 0.02);
     grid-area: form-price__thikness;
-    padding: 40px 20px 20px 40px; 
+    padding: 40px 15px 40px 40px;
 }
 
 .form-price__thikness_subtitle {
@@ -411,7 +532,7 @@ body {
     font-weight: 600;
     letter-spacing: 0.02em;
     line-height: 34px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .form-price__thikness_text {
@@ -429,8 +550,8 @@ body {
     border: 1px solid #000000;
     border-radius: 20px;
     box-shadow: 40px 45px 96px rgba(233, 236, 239, 0.04), 20px 24px 45px rgba(233, 236, 239, 0.03), 8px 10px 20px rgba(233, 236, 239, 0.03), 2px 3px 9px rgba(233, 236, 239, 0.02);
-    grid-area: form-price__square;
-    padding: 40px 20px 20px 40px; 
+    grid-area: form-price__square; 
+    padding: 40px 15px 40px 40px;
 }
 
 .form-price__square_subtitle {
@@ -441,7 +562,7 @@ body {
     font-size: 28px;
     letter-spacing: 0.02em;
     line-height: 34px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .form-price__square_text {
@@ -458,7 +579,7 @@ body {
     background: #FFE80C;
     border-radius: 30px;
     grid-area: form-price__calculate-exact-price;
-    padding: 40px 40px 20px 40px; 
+    position: relative;
 }
 
 .form-price__calculate-exact-price_subtitle {
@@ -469,29 +590,21 @@ body {
     font-weight: 600;
     letter-spacing: 0.02em;
     line-height: 34px;
-    margin-bottom: 20px;
-}
-
-.form-price__calculate-exact-price_text {
-    color: rgba(49, 51, 56, 1);
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    letter-spacing: 0.05em;
-    line-height: 20px;
-    margin-bottom: 30px;
+    margin: 40px 0 70px 40px;
 }
 
 .form-price__calculate-exact-price_submit-application {
     align-items: center;
     background: rgba(49, 51, 56, 1);
     border-radius: 10px;
+    bottom: 40px;
     column-gap: 20px;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 146fr 44fr;
     justify-content: start;
-    padding: 15px 20px 15px 20px;
+    margin: 0 25px;
+    padding: 15px 20px;
+    position: absolute;
 }
 
 .form-price__calculate-exact-price_submit-application_text {
@@ -500,85 +613,87 @@ body {
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.02em;
     line-height: 20px;
+}
+
+.form-price__calculate-exact-price_submit-application_arrow {
+    justify-self: end;
 }
 
 .our-advantages {
     background: rgba(49, 51, 56, 1);
-    padding: 158px 0 150px 0;
+    padding: 150px 0 175px 0;
 }
 
-.our-advantages__advantages {
-    display: grid;
-    gap: 75px 0;
-    grid-template-columns: 1fr 1fr;
-}
-
-.our-advantages__advantage {
-    align-items: center;
-    column-gap: 30px;
-    display: grid;
-    grid-template: 
-        [start] "our-advantages__square-block our-advantages__info_short" auto [row-2]
-        [row-2] "our-advantages__square-block our-advantages__info" auto [row-end] / 1fr 5.6fr;
+.our-advantages__title_wrapper {
+    text-align: center;
+    width: 100%;
 }
 
 .our-advantages__title {
-    color: rgba(187, 249, 108, 1);
-    font-family: 'Montserrat', sans-serif;
-    font-size: 52px;
-    font-style: normal;
-    font-weight: 600;
-    letter-spacing: 0.02em;
-    line-height: 63px;
-}
-
-.our-advantages__text {
-    color: rgba(255, 255, 255, 1);
-    font-family: 'Montserrat', sans-serif;
-    font-size: 28px;
-    font-style: normal;
-    font-weight: 600;
-    letter-spacing: 0.02em;
-    line-height: 34px;
-}
-
-.our-advantages__square-block {
-    align-self: start;
-    background: rgba(255, 255, 255, 1);
-    border-radius: 10px;
-    grid-area: our-advantages__square-block;
-    height: 100px;
-    justify-self: end;
-    width: 100px;
-}
-
-.our-advantages__info_short {
-    align-self: start;
-    color: rgba(233, 236, 239, 1);
+    background: linear-gradient(180deg, #FFFFFF 50.01%, rgba(255, 255, 255, 0.5) 94.33%);
+    background-clip: text;
+    background-blend-mode: hard-light;
+    color: transparent;
     font-family: 'Montserrat', sans-serif;
     font-size: 38px;
     font-style: normal;
     font-weight: 600;
-    grid-area: our-advantages__info_short;
-    justify-self: start;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.02em;
     line-height: 46px;
+    margin:0 10px 115px 10px;
+    position: relative;
+    -webkit-background-clip: text;
 }
 
-.our-advantages__info {
-    align-self: start;
+.our-advantages__advantage_square-block {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 19px 28px 35px rgba(233, 236, 239, 0.06), 10px 14px 18px rgba(233, 236, 239, 0.05), 4.00107px 6px 9px rgba(233, 236, 239, 0.04), 1px 1px 4px rgba(233, 236, 239, 0.03);
+    height: 120px;
+    width: 120px;
+}
+
+.our-advantages__advantages_wrapper {
+    display: grid;
+    grid-template-columns: 28fr 136fr 28fr;
+}
+
+.our-advantages__advantages {
+    display: grid;
+    gap: 100px 55px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-column: 2 / 2;
+}
+
+.our-advantages__advantage {
+    align-items: center;
+    column-gap: 45px;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.our-advantages__advantage__info_short {
     color: rgba(233, 236, 239, 1);
     font-family: 'Montserrat', sans-serif;
     font-size: 24px;
     font-style: normal;
-    font-weight: 500;
-    grid-area: our-advantages__info;
-    justify-self: start;
-    letter-spacing: 0.05em;
+    font-weight: 600;
+    letter-spacing: 0.02em;
     line-height: 29px;
-    word-wrap: break-word;
+    margin-bottom: 15px;
+}
+
+.our-advantages__advantage__info_long {
+    color: rgba(233, 236, 239, 1);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    line-height: 20px;
 }
 
 .submit-application {
@@ -705,6 +820,7 @@ body {
     background: rgba(16, 137, 255, 1);
     border: 0px;
     border-radius: 30px;
+    box-shadow: 15px 55px 89px rgba(16, 137, 255, 0.04), 9px 32px 47px rgba(16, 137, 255, 0.03), 4px 16px 22px rgba(16, 137, 255, 0.02), 2px 5px 10px rgba(16, 137, 255, 0.02), 1px 2px 4px rgba(16, 137, 255, 0.01);
     color: rgba(255, 255, 255, 1);
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
@@ -720,6 +836,23 @@ body {
 .submit-application__map-block {
     grid-area: submit-application__map-block;
     grid-column: 4 / 4;
+    max-height: 670px;
+    max-width: 685px;
+    position: relative;
+}
+
+.submit-application__map-block_map {
+    position: absolute;
+    top: 70px;
+    z-index: 1;
+}
+
+.submit-application__map-block_block {
+    background: rgba(16, 137, 255, 1);
+    left: 250px;
+    height: 600px;
+    position: absolute;
+    width: 435px;
 }
 
 .submit-application__info {
