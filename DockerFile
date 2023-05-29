@@ -1,0 +1,4 @@
+FROM openjdk:17
+EXPOSE 8080
+ADD target/Dynamics.jar Dynamics.jar
+ENTRYPOINT ["java","-jar","/Dynamics.jar"]
