@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <div>админка</div>
+  <form th:action="@{/admin}" method="post">
+      <fieldset>
+          <div>
+              <label for="">Первая</label>
+              <input type="text" name="one" placeholder="первая админка"/>
+          </div>
+          <div>
+              <label for="">Вторая</label>
+              <input type="text" name="two" placeholder="вторая админка"/>
+          </div>
+      </fieldset>
+      <button type="submit">поменять</button>
+  </form>
+</body>
+</html>

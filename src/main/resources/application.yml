@@ -1,0 +1,8 @@
+spring:
+    datasource:
+        url: jdbc:postgresql://localhost:5432/Dyna
+        username: postgres
+        password: ernest21062003
+    jpa:
+        generate-ddl: true
+        ddl-auto: update
