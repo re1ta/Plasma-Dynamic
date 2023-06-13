@@ -29,7 +29,6 @@ public class MainControllers {
             String mailText = name + "\n" +
                               phone +"\n" +
                               mail + "\n" + text;
-            emailService.sendEmailMessage(mailText);
-        }
+            emailService.sendEmailMessage(mailText);}
         return "index";}
 }
