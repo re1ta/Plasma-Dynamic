@@ -18,7 +18,7 @@ public class EmailService  {
 
     public void sendEmailMessage(String text){
         Properties properties = new Properties();
-        String from = "ernest.ibatov@mail.ru";
+        String from = "thermalspray_email@mail.ru";
         String to = "thermalspray@mail.ru";
         properties.put("mail.smtp.host","smtp.mail.ru");
         properties.put("mail.smtp.post","465");
@@ -30,7 +30,7 @@ public class EmailService  {
                 new Authenticator() {
                     @Override
                     protected PasswordAuthentication getPasswordAuthentication() {
-                        return new PasswordAuthentication(from,"aq0v7FZcZ7j5u5y4Fz20");
+                        return new PasswordAuthentication(from,"jVNBABrq3X41MAG4nmZY");
                     }
                 }
         );
