@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ru"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="https://www.thymeleaf.org">
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet"th:href="@{../static/css/main.css}">
+  <link rel="preconnect"th:href="@{https://fonts.googleapis.com}">
+  <link rel="preconnect" th:href="@{https://fonts.gstatic.com}" crossorigin>
+  <link th:href="@{https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap}" rel="stylesheet">
+  <title>Plasma Dynamics</title>
+</head>
+  <body>
+    <header class="header">
+      <img th:src="@{../static/sources/overall/logo.svg}" alt="" class="header__logo">
+      <nav class="header__navigation">
+        <ul class="header__navigation__menu">
+          <li class="header__navigation__menu__menu-item header__navigation__menu__menu-item_services">
+            <a th:href="@{#service}">Услуги</a>
+          </li>
+          <li class="header__navigation__menu__menu-item header__navigation__menu__menu-item_equipment">
+            <a th:href="@{#equipment}">Оборудование</a>
+          </li>
+          <li class="header__navigation__menu__menu-item header__navigation__menu__menu-item_about-us">
+            <a th:href="@{#about-us}">О нас</a>
+          </li>
+          <li class="header__navigation__menu__menu-item header__navigation__menu__menu-item_contacts">
+            <a th:href="@{#contacts}">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <p class="header__phone">+7 (992) 014-38-77</p>
+      <a th:href="@{#submit-application}" class="header__submit-application submit-application-anchor">
+        <p class="header__submit-application_text">Оставить заявку</p>
+      </a>
+    </header>
+    <main class="main">
+      <section class="company">
+        <div class="company__title-subtitle">
+          <h1 class="company__title-subtitle_title">Thermal Spray - лучшее решение для вас</h1>
+          <h2 class="company__title-subtitle_subtitle">Мы увеличим срок эксплуатации вашего оборудования и снизим денежные затраты на его ремонт</h2>
+        </div>
+        <div class="company__images">
+          <div class="company__images__wrapper-1">
+            <img th:src="@{../static/sources/company/images/main-section-image-1.jpg}" alt="" class="company__images__wrapper-1_image">
+          </div>
+          <div class="company__images__wrapper-2">
+            <img th:src="@{../static/sources/company/images/main-section-image-2.jpg}" alt="" class="company__images__wrapper-2_image">
+          </div>
+          <div class="company__images__wrapper-3">  
+            <img th:src="@{../static/sources/company/images/main-section-image-3.jpg}" alt="" class="company__images__wrapper-3_image">
+          </div>
+        </div>
+        <ul class="company__companies">
+          <li class="company__companies__partner company__companies__partner-1">
+            <img th:src="@{../static/sources/company/icons/uralkabel.svg}" alt="" class="company__companies__partner_image">
+          </li>
+          <li class="company__companies__partner company__companies__partner-2">
+            <img th:src="@{../static/sources/company/icons/uztm.svg}" alt="" class="company__companies__partner_image">
+          </li>
+          <li class="company__companies__partner company__companies__partner-3">
+            <img th:src="@{../static/sources/company/icons/irs.svg}" alt="" class="company__companies__partner_image">
+          </li>
+          <li class="company__companies__partner company__companies__partner-4">
+            <img th:src="@{../static/sources/company/icons/mashprom.svg}" alt="" class="company__companies__partner_image">
+          </li>
+          <li class="company__companies__partner company__companies__partner-5">
+            <img th:src="@{../static/sources/overall/icons/assistance-fund.svg}" alt="" class="company__companies__partner_image">
+          </li>
+        </ul>
+      </section>
+      <section class="technologies">
+        <div class="technologies__info-block">
+          <h2 class="technologies__info-block_title">Плазменные технологии</h2>
+          <p class="technologies__info-block_subtitle">Группа технологий получения и обработки материалов с использованием нагрева исходных продуктов в плазменной струе или перевода их в плазменное состояние.</p>
+        </div>
+        <p class="technologies__text-1">Плазменная наплавка увеличит срок эксплуатации деталей, а также восстановит изношенное изделие. Плазменная наплавка широко применяется для защиты от высокотемпературного износа, для защиты от коррозии, для упрочнения поверхности деталей, работающих при высоких нагрузках.</p>
+        <div class="technologies__possibilities">
+          <div class="technologies__possibilities__block-title">
+            <img th:src="@{../static/sources/clip.svg}" alt="" class="technologies__clip">
+            <img th:src="@{../static/sources/clip.svg}" alt="" class="technologies__clip">
+            <p class="technologies__possibilities_text">Преимущества плазменной наплавки:</p>
+          </div>
+          <ul class="technologies__list">
+            <li class="technologies__list-item">
+              <img th:src="@{../static/sources/overall/check-mark-bullet.svg}" alt="" class="technologies__list-item_bullet">
+              <p class="technologies__list-item_text">получения толщины наплавляемого слоя от 0.1 мм</p>
+            </li>
+            <li class="technologies__list-item">
+              <img th:src="@{../static/sources/overall/check-mark-bullet.svg}" alt="" class="technologies__list-item_bullet">
+              <p class="technologies__list-item_text">выполнения закалки поверхности детали</p>
+            </li>
+            <li class="technologies__list-item">
+              <img th:src="@{../static/sources/overall/check-mark-bullet.svg}" alt="" class="technologies__list-item_bullet">
+              <p class="technologies__list-item_text">наплавления различных износостойких материалов</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="coating-types">
+        <h2 class="coating-types__title">Виды покрытий</h2>
+        <ul class="coating-types__types">
+          <li class="coating-types__types__type">
+            <img th:src="@{../static/sources/coating-types/repair.svg}" alt="" class="coating-types__types__type_image">
+            <div class="coating-types__types__type__info">
+              <p class="coating-types__types__type__info_short">Ремонт и восстановление изношенных поверхностей</p>
+              <p class="coating-types__types__type__info_long">Плазменная наплавка является прогрессивным методом восстановления изношенных деталей</p>
+            </div>
+          </li>
+          <li class="coating-types__types__type">
+            <img th:src="@{../static/sources/coating-types/electrical-insulating.svg}" alt="" class="coating-types__types__type_image">
+            <div class="coating-types__types__type__info">
+              <p class="coating-types__types__type__info_short">Электроизоляционные</p>
+              <p class="coating-types__types__type__info_long">Используют для создания изоляционного покрытия на различных электропроводящих поверхностях</p>
+            </div>
+          </li>
+          <li class="coating-types__types__type">
+            <img th:src="@{../static/sources/coating-types/anti-corrosion.svg}" alt="" class="coating-types__types__type_image">
+            <div class="coating-types__types__type__info">
+              <p class="coating-types__types__type__info_short">Коррозионностойкие</p>
+              <p class="coating-types__types__type__info_long">Широко применяется для защиты деталей от атмосферной коррозии и от разрушительного действия агрессивных сред</p>
+            </div>
+          </li>
+          <li class="coating-types__types__type">
+            <img th:src="@{../static/sources/coating-types/friction-and-antifriction.svg}" alt="" class="coating-types__types__type_image">
+            <div class="coating-types__types__type__info">
+              <p class="coating-types__types__type__info_short">Фрикционные и антифрикицонные</p>
+              <p class="coating-types__types__type__info_long">Нанесение покрытий, обладающих соответственно высоким и низким коэффициентом трения</p>
+            </div>
+          </li>
+          <li class="coating-types__types__type">
+            <img th:src="@{../static/sources/coating-types/heat-resistant.svg}" alt="" class="coating-types__types__type_image">
+            <div class="coating-types__types__type__info">
+              <p class="coating-types__types__type__info_short">Жаростойкие</p>
+              <p class="coating-types__types__type__info_long">Нанесение жаростойкого покрытия с целью увеличения срока службы детал при температуре свыше 1200 ° С.</p>
+            </div>
+          </li>
+          <li class="coating-types__types__type">
+            <img th:src="@{../static/sources/coating-types/thermal-barrier.svg}" alt="" class="coating-types__types__type_image">
+            <div class="coating-types__types__type__info">
+              <p class="coating-types__types__type__info_short">Термобарьерные</p>
+              <p class="coating-types__types__type__info_long">Применяется для изолирования деталей, работающих при повышенных температурах</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <a name="service"></a>
+      <section class="form-price">
+        <div class="form-price__grid-wrapper">
+          <div class="form-price__price-formation">
+            <h1 class="form-price__price-formation_title">Формирование цены </h1>
+            <p class="form-price__price-formation_text">Конечная стоимость обговаривается с представителем нашей компании</p>
+          </div>
+          <div class="form-price__material">
+            <h2 class="form-price__material_subtitle">Материал</h2>
+            <ul class="form-price__material_list">
+              <li class="form-price__material_list-item">
+                <img th:src="@{../static/sources/overall/check-mark-bullet.svg}" alt="" class="form-price__material_list-item_bullet">
+                <p class="form-price__material_list-item_text">Жаростойкие</p>
+              </li>
+              <li class="form-price__material_list-item">
+                <img th:src="@{../static/sources/overall/check-mark-bullet.svg}" alt="" class="form-price__material_list-item_bullet">
+                <p class="form-price__material_list-item_text">Фрикционные и антифрикицонные</p>
+              </li>
+              <li class="form-price__material_list-item">
+                <img th:src="@{../static/sources/overall/check-mark-bullet.svg}" alt="" class="form-price__material_list-item_bullet">
+                <p class="form-price__material_list-item_text">Термобарьерные</p>
+              </li>
+              <li class="form-price__material_list-item">
+                <img th:src="@{../static/sources/overall/check-mark-bullet.svg}" alt="" class="form-price__material_list-item_bullet">
+                <p class="form-price__material_list-item_text">Коррозионностойкие</p>
+              </li>
+              <li class="form-price__material_list-item">
+                <img th:src="@{../static/sources/overall/check-mark-bullet.svg}" alt="" class="form-price__material_list-item_bullet">
+                <p class="form-price__material_list-item_text">Электроизоляционные</p>
+              </li>
+            </ul>
+            <p class="form-price__material_text">В зависимости от вида покрытия и требованиям к нему, стоимость материала меняется от 1000₽ до 20 000₽ за 1 киллограм</p>
+          </div>
+          <div class="form-price__geometry-difficulty">
+            <h2 class="form-price__geometry-difficulty_subtitle">Сложность геометрии</h2>
+            <p class="form-price__geometry-difficulty_text">Цена пропорциональна сложности строения детали</p>
+          </div>
+          <div class="form-price__thikness">
+            <h2 class="form-price__thikness_subtitle">Толщина</h2>
+            <p class="form-price__thikness_text">Толщина наплавляемого покрытия может варьироваться от 0,1 мм до 5 мм</p>
+          </div>
+          <div class="form-price__square">
+            <h2 class="form-price__square_subtitle">Площадь</h2>
+            <p class="form-price__square_text">Размер детали до 2-x метров в длину и до 1 метра в диаметре</p>
+          </div>
+          <div class="form-price__calculate-exact-price">
+            <h2 class="form-price__calculate-exact-price_subtitle">Рассчитаем точную цену</h2>
+            <div class="form-price__calculate-exact-price_submit-application">
+              <a th:href="@{#submit-application}" class="form-price__calculate-exact-price_submit-application_anchor submit-application-anchor">
+                <p class="form-price__calculate-exact-price_submit-application_text">Оставить заявку</p>
+              </a>
+              <img th:src="@{../static/sources/form-price/yellow-arrow.svg}" alt="" class="form-price__calculate-exact-price_submit-application_arrow">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="equipment">
+        <h2 class="equipment__title">Оборудование для наплавки </h2>
+        <a name="equipment"></a>
+        <p class="equipment__subtitle">на внешние и внутренние поверхности</p>
+        <div class="equipment__block__wrapper">
+          <div class="equipment__block equipment__block_1">
+            <div class="equipment__block__name-photo">
+              <p class="equipment__block__name-photo_name">PDT-250</p>
+              <img th:src="@{../static/sources/equipment/images/equipment.jpg}" alt="" class="equipment__block__name-photo_photo">
+            </div>
+            <p class="equipment__block_list-title">Характеристики:</p>
+            <ul class="equipment__block__characteristics">
+              <li class="equipment__block__characteristics_characteristic">
+                <img th:src="@{../static/sources/equipment/icons/blue-arrow.svg}" alt="" class="equipment__block__characteristics_characteristic_icon">
+                <p class="equipment__block__characteristics_characteristic_text">рабочий ток, 70-250 А</p>
+              </li>
+              <li class="equipment__block__characteristics_characteristic">
+                <img th:src="@{../static/sources/equipment/icons/blue-arrow.svg}" alt="" class="equipment__block__characteristics_characteristic_icon">
+                <p class="equipment__block__characteristics_characteristic_text">мощность 25 кВт</p>
+              </li>
+              <li class="equipment__block__characteristics_characteristic">
+                <img th:src="@{../static/sources/equipment/icons/blue-arrow.svg}" alt="" class="equipment__block__characteristics_characteristic_icon">
+                <p class="equipment__block__characteristics_characteristic_text">масса кг < 5 кг</p>
+              </li>
+            </ul>
+            <p class="equipment__block_cost">400 000 ₽</p>
+            <button class="equipment__block__button equipment__block__button_1">
+              <p class="equipment__block__button_text">Подробнее</p>
+              <img th:src="@{../static/sources/equipment/icons/black-arrow.svg}" alt="" class="equipment__block__button_icon">
+            </button>
+          </div>
+          <div class="equipment__block equipment__block_2">
+            <p class="equipment__block_list-title">Дополнительный характеристики:</p>
+            <ul class="equipment__block__characteristics">
+              <li class="equipment__block__characteristics_characteristic">
+                <img th:src="@{../static/sources/equipment/icons/blue-arrow.svg}" alt="" class="equipment__block__characteristics_characteristic_icon">
+                <p class="equipment__block__characteristics_characteristic_text">режим работы, ПВ, 100%</p>
+              </li>
+              <li class="equipment__block__characteristics_characteristic">
+                <img th:src="@{../static/sources/equipment/icons/blue-arrow.svg}" alt="" class="equipment__block__characteristics_characteristic_icon">
+                <p class="equipment__block__characteristics_characteristic_text">плазмообразующий газ Аргон</p>
+              </li>
+              <li class="equipment__block__characteristics_characteristic">
+                <img th:src="@{../static/sources/equipment/icons/blue-arrow.svg}" alt="" class="equipment__block__characteristics_characteristic_icon">
+                <p class="equipment__block__characteristics_characteristic_text">рабочее напряжение на плазматроне (при работе на воздухе) 60-100В</p>
+              </li>
+              <li class="equipment__block__characteristics_characteristic">
+                <img th:src="@{../static/sources/equipment/icons/blue-arrow.svg}" alt="" class="equipment__block__characteristics_characteristic_icon">
+                <p class="equipment__block__characteristics_characteristic_text">допускается применение Азот/Аргон, Аргон/Водород</p>
+              </li>
+              <li class="equipment__block__characteristics_characteristic">
+                <img th:src="@{../static/sources/equipment/icons/blue-arrow.svg}" alt="" class="equipment__block__characteristics_characteristic_icon">
+                <p class="equipment__block__characteristics_characteristic_text">транспортирующий газ Аргон</p>
+              </li>
+              <li class="equipment__block__characteristics_characteristic">
+                <img th:src="@{../static/sources/equipment/icons/blue-arrow.svg}" alt="" class="equipment__block__characteristics_characteristic_icon">
+                <p class="equipment__block__characteristics_characteristic_text">расход плазмообразующего газа 40-50 л/мин </p>
+              </li>
+              <li class="equipment__block__characteristics_characteristic">
+                <img th:src="@{../static/sources/equipment/icons/blue-arrow.svg}" alt="" class="equipment__block__characteristics_characteristic_icon">
+                <p class="equipment__block__characteristics_characteristic_text">расход защитного газа, л/мин </p>
+              </li>
+              <li class="equipment__block__characteristics_characteristic">
+                <img th:src="@{../static/sources/equipment/icons/blue-arrow.svg}" alt="" class="equipment__block__characteristics_characteristic_icon">
+                <p class="equipment__block__characteristics_characteristic_text">расход транспортирующего газа 5-10 л/мин </p>
+              </li>
+              <li class="equipment__block__characteristics_characteristic">
+                <img th:src="@{../static/sources/equipment/icons/blue-arrow.svg}" alt="" class="equipment__block__characteristics_characteristic_icon">
+                <p class="equipment__block__characteristics_characteristic_text">коэффициент использования порошка > 0,7</p>
+              </li>
+              <li class="equipment__block__characteristics_characteristic">
+                <img th:src="@{../static/sources/equipment/icons/blue-arrow.svg}" alt="" class="equipment__block__characteristics_characteristic_icon">
+                <p class="equipment__block__characteristics_characteristic_text">расход воды 15 л/мин</p>
+              </li>
+            </ul>
+            <button class="equipment__block__button equipment__block__button_2">
+              <img th:src="@{../static/sources/equipment/icons/black-arrow.svg}" alt="" class="equipment__block__button_icon">
+              <p class="equipment__block__button_text">Назад</p>
+            </button>
+          </div>
+        </div>
+      </section>
+      <a name="about-us"></a>
+      <section class="about-company">
+        <div class="about-company__block">
+          <img th:src="@{../static/sources/about-company/welding.jpg}" alt="" class="about-company__block_image">
+          <div class="about-company__block__info">
+            <p class="about-company__block__info_short">О компании</p>
+            <p class="about-company__block__info_long">THERMAL SPRAY – это компания специализирующаяся на плазменных методах наплавки функциональных покрытий на детали машин.</p>
+            <p class="about-company__block__info_long">Мы предлагаем индивидуальный подход к каждому проекту, чтобы удовлетворить потребности и требования клиента. Наша компания гарантирует высокое качество работы и соблюдение всех необходимых стандартов и нормативов.</p>
+            <p class="about-company__block__info_long">Наша цель – помочь вам увеличить срок эксплуатации вашего оборудования и снизить денежные затраты на его ремонт.</p>
+          </div>
+        </div>
+      </section>
+      <section class="our-advantages">
+        <h2 class="our-advantages__title">Почему вы должны выбрать нас</h2>
+        <ul class="our-advantages__advantages">
+          <li class="our-advantages__advantage">
+            <div class="our-advantages__advantage_square-block">
+              <img th:src="@{../static/sources/our-advantages/reliability.svg}" alt="" class="">
+            </div>
+            <div class="our-advantages__advantage__info">
+              <p class="our-advantages__advantage__info_short">Надежность</p>
+              <p class="our-advantages__advantage__info_long">Современное оборудование по плазменной наплавке и широкая приборная база методов контроля полученных покрытий позволяют гаранировать выское качество наших услуг. </p>
+            </div>
+          </li>
+          <li class="our-advantages__advantage">
+            <div class="our-advantages__advantage_square-block">
+              <img th:src="@{../static/sources/our-advantages/guarantee.svg}" alt="" class="">
+            </div>
+            <div class="our-advantages__advantage__info">
+              <p class="our-advantages__advantage__info_short">Гарантия</p>
+              <p class="our-advantages__advantage__info_long">На каждое покрытие мы даем паспорт и гарантийные обязательства.</p>
+            </div>
+          </li>
+          <li class="our-advantages__advantage">
+            <div class="our-advantages__advantage_square-block">
+              <img th:src="@{../static/sources/our-advantages/speed.svg}" alt="" class="">
+            </div>
+            <div class="our-advantages__advantage__info">
+              <p class="our-advantages__advantage__info_short">Скорость</p>
+              <p class="our-advantages__advantage__info_long">Слаженная команда и работа без посредников обеспечивают быструю отработку каждого заказа.</p>
+            </div>
+          </li>
+          <li class="our-advantages__advantage">
+            <div class="our-advantages__advantage_square-block">
+              <img th:src="@{../static/sources/our-advantages/quality-materials.svg}" alt="" class="">
+            </div>
+            <div class="our-advantages__advantage__info">
+              <p class="our-advantages__advantage__info_short">Качественные материалы</p>
+              <p class="our-advantages__advantage__info_long">Для наплавки покрытий мы используем материалы только от проверенных поставщиков.</p>
+            </div>
+          </li>
+          <li class="our-advantages__advantage">
+            <div class="our-advantages__advantage_square-block">
+              <img th:src="@{../static/sources/our-advantages/qualified-specialists.svg}" alt="" class="">
+            </div>
+            <div class="our-advantages__advantage__info">
+              <p class="our-advantages__advantage__info_short">Квалифицированные специалисты</p>
+              <p class="our-advantages__advantage__info_long">Наши сотрудники являются кандидатами технических наук в области материаловедения, химии твердого тела, металлургии и плазменных технологий. Специалисты компании имеют более 10 лет стажа работы в области создания упрочняющих покрытий.</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="examples">
+        <h2 class="example__subtitle">Примеры наших работ </h2>
+        <div class="examples__example examples__example_1">
+          <div class="examples__example__request">
+            <h3 class="examples__example__request_short">Запрос</h3>
+            <p class="examples__example__request_long">Нанесения износостойкого, жаростойкого и термобарьерного композитного покрытия на фурмы доменных печей для компании "НЛМК"</p>
+          </div>
+          <div class="examples__example__answer">
+            <p class="examples__example__answer_text">
+              Жаростойкое покрытие представляет собой надежную пленку, состоящую из оксидов металлов,
+              которая прекрасно защищает не только поверхность обрабатываемой плоскости, но и ее подложку от окислительных процессов и коррозии.
+              <br><br>
+              Качественное жаростойкое покрытие должно обладать целым рядом рабочих характеристик. К ним можно отнести: абсолютную цельность и плотность;
+              одинаковую толщину по всей поверхности покрытия; нейтральное взаимодействие с основанием, при котором покрытие не влияет на его качества;
+              устойчивость к агрессивным химическим средам; устойчивость к воздействию высоких температур (приблизительно до 1000–1200 °С);
+              стойкость к атмосферным явлениям; оптимальный показатель теплового расширения; безопасность в ежедневной эксплуатации; экологическую чистоту.
+            </p>
+            <div class="examples__example__answer__photos">
+              <div class="examples__example__answer__photos__before">
+                <p class="examples__example__answer__photos__before_text">До</p>
+                <img th:src="@{../static/sources/examples/images/before-1.jpg}" alt="" class="examples__example__answer__photos_before_photo">
+              </div>
+              <div class="examples__example__answer__photos__after">
+                <p class="examples__example__answer__photos__after_text">После</p>
+                <img th:src="@{../static/sources/examples/images/after-1.jpg}" alt="" class="examples__example__answer__photos__after_photo">
+              </div>
+              <div class="examples__example__answer__photos__client">
+                <img th:src="@{../static/sources/examples/icons/nlmk.svg}" alt="" class="examples__example__answer__photos__client_logo">
+                <div class="examples__example__answer__photos__client__info">
+                  <p class="examples__example__answer__photos__client__info_short">НМЛК</p>
+                  <p class="examples__example__answer__photos__client__info_long">Международный производитель стальной продукции</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="examples__example examples__example_2">
+          <div class="examples__example__request">
+            <h3 class="examples__example__request_short">Запрос</h3>
+            <p class="examples__example__request_long">Нанесение антифрикционного покрытия на медной основе на детали трения-скольжения</p>
+          </div>
+          <div class="examples__example__answer">
+            <p class="examples__example__answer_text">
+              Антифрикционное покрытие обладает низким коэффициентом трения, его применяют для уменьшения износа и снижения трения скольжения.
+              Данное покрытие отличаются низкой способностью к адгезии, теплопроводностью, и стабильностью свойств.
+              Нанесение антифрикционного покрытия обеспечивает увеличение срока службы деталей в несколько раз.
+              <br><br>
+              Качественные антифрикционные покрытия характеризуются следующими преимуществами:
+              снижение потерь энергии и повышение надежности при работе в средах содержащих абразив;
+              высокая демпфирующая способность при воздействии циклических и ударных нагрузок; износостойкость деталей.
+            </p>
+            <div class="examples__example__answer__photos">
+              <p class="examples__example__answer__photos__text">После нанесения покрытия</p>
+              <img th:src="@{../static/sources/examples/images/before-2.jpg}" alt="" class="examples__example__answer__photos_before_photo">
+              <img th:src="@{../static/sources/examples/images/after-2.jpg}" alt="" class="examples__example__answer__photos__after_photo">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="team">
+        <h2 class="team__title">Основная команда</h2>
+        <ul class="team__team-members">
+          <li class="team__team-member__wrapper team__team-member__wrapper_1">
+            <div class="team__team-member">
+              <img th:src="@{../static/sources/team/kuklin.jpg}" alt="" class="team__team-member_image">
+              <p class="team__team-member_name">Куклин Илья</p>
+              <p class="team__team-member_job-title">Основатель проекта & Администратор</p>
+            </div>
+          </li>
+          <li class="team__team-member__wrapper team__team-member__wrapper_2">
+            <div class="team__team-member">
+              <img th:src="@{../static/sources/team/barashev.jpg}" alt="" class="team__team-member_image">
+              <p class="team__team-member_name">Барашев Николай</p>
+              <p class="team__team-member_job-title">Разработка продукта, модернизация продукта</p>
+            </div>
+          </li>
+          <li class="team__team-member__wrapper team__team-member__wrapper_3">
+            <div class="team__team-member">
+              <img th:src="@{../static/sources/team/idiyatulin.jpg}" alt="" class="team__team-member_image">
+              <p class="team__team-member_name">Идиятулин Алексей</p>
+              <p class="team__team-member_job-title">Управление финансами, привлечение инвестиций, отчетность</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="submit-application">
+        <form th:action="@{/}" method="post" class="submit-application__form">
+          <h2 class="submit-application__form__title">Оставить заявку</h2>
+          <p class="submit-application__form__subtitle">Ответим на ваши вопросы и расскажем о себе</p>
+          <fieldset class="submit-application__form__fieldset">
+            <input type="text" class="submit-application__form__fieldset__input_name"
+                   th:name="name" placeholder="Имя">
+            <input type="tel" class="submit-application__form__fieldset__input_phone"
+                   th:name="phone" placeholder="+7(_ _ _) _ _ _-_ _-_ _">
+            <input type="email" class="submit-application__form__fieldset__input_email"
+                   th:name="mail" placeholder="your@email.com">
+            <textarea type="text" class="submit-application__form__fieldset__textarea_request"
+                   th:name="text" placeholder="Ваш запрос..." wrap="soft"></textarea>
+          </fieldset>
+          <button type="submit" class="submit-application__form_button_send">
+            <p class="submit-application__form_button_send_text">Отправить</p>
+          </button>
+        </form>
+        <div class="submit-application__map-block">
+          <div class="submit-application__map-block_block">
+            <iframe class="submit-application__map-block_map" th:src="@{https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d545.4835735551433!2d60.655174129360944!3d56.8470709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c16c3194d14955%3A0xacb0b5dc321c558b!2z0YPQuy4g0J_QtdGA0LLQvtC80LDQudGB0LrQsNGPLCA5MSwg0JXQutCw0YLQtdGA0LjQvdCx0YPRgNCzLCDQodCy0LXRgNC00LvQvtCy0YHQutCw0Y8g0L7QsdC7LiwgNjIwMDQ5!5e0!3m2!1sru!2sru!4v1684754067734!5m2!1sru!2sru}" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+        <a name="submit-application"></a>
+        <ul class="submit-application__contacts">
+          <li class="submit-application__contacts__contact__info submit-application__contacts_contact_1">
+            <img th:src="@{../static/sources/submit-application/map-mark.svg}" alt="" class="submit-application__contacts_contact_icon submit-application__contacts_contact_icon-1">
+            <div class="submit-application__contacts_contact__info">
+              <p class="submit-application__contacts_contact__info_short">Адрес</p>
+              <p class="submit-application__contacts_contact__info_long">623703</p>
+              <p class="submit-application__contacts_contact__info_long">Свердловская обл.</p>
+              <p class="submit-application__contacts_contact__info_long">г. Березовский</p>
+              <p class="submit-application__contacts_contact__info_long">Кольцевая ул, 2б</p>
+            </div>
+          </li>
+          <li class="submit-application__contacts__contact__info submit-application__contacts_contact_2">
+            <img th:src="@{../static/sources/submit-application/phone.svg}" alt="" class="submit-application__contacts_contact_icon submit-application__contacts_contact_icon-2">
+            <div class="submit-application__contacts_contact__info">
+              <p class="submit-application__contacts_contact__info_short">Телефон</p>
+              <p class="submit-application__contacts_contact__info_long">+7 (992) 014-38-77</p>
+            </div>
+          </li>
+          <li class="submit-application__contacts__contact__info submit-application__contacts_contact_3">
+            <img th:src="@{../static/sources/submit-application/letter.svg}" alt="" class="submit-application__contacts_contact_icon submit-application__contacts_contact_icon-3">
+            <div class="submit-application__contacts_contact__info">
+              <p class="submit-application__contacts_contact__info_short">Почта</p>
+              <p class="submit-application__contacts_contact__info_long">thermalspray@mail.ru</p>
+            </div>
+          </li>
+        </ul>
+        <a name="contacts"></a>
+      </section>
+    </main>
+    <footer class="footer">
+      <img th:src="@{../static/sources/overall/logo.svg}" alt="" class="footer__logo">
+      <div class="footer__info">
+        <img th:src="@{../static/sources/overall/assistance-fund.svg}" alt="" class="footer__info_assistance-fund-logo">
+        <p class="footer__info_text">Проект поддержан Фондом в рамках программы «Студенческий стартап» федерального проекта «Платформа университетского технологического предпринимательства»</p>
+        <p class="footer__info_copyright">Товарный знак © 2022 Thermal Spray – Авторское право сохранено.</p>
+      </div>
+    </footer>
+    <script th:src="@{../static/js/main.js}"></script>
+  </body>
+</html>

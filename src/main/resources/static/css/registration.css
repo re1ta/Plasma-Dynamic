@@ -1,0 +1,117 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, p, blockquote, table, th, td, embed, object {
+	padding: 0;
+	margin: 0; 
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+fieldset, img, abbr {
+	border: 0;
+}
+
+address, caption, cite, code, dfn, em, h1, h2, h3, h4, h5, h6, strong, th, var {
+	font-weight: normal;
+	font-style: normal;
+}
+
+ul {
+	list-style: none;
+}
+
+caption, th {
+	text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-size: 1.0em;
+}
+
+q:before, q:after {
+	content: '';
+}
+
+a, ins {
+    color: #000000;
+	text-decoration: none;
+}
+
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+    width: 100%;
+}
+
+body {
+    background-color: rgba(49, 51, 56, 1);
+    color: rgba(233, 236, 239, 1);
+    display: grid;
+    height: 100%;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+input {
+    background: #FFFFFF;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    line-height: 20px;
+    margin: 10px 20px 20px 50px;
+    padding: 10px 20px;
+}
+
+label, legend {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    line-height: 20px;
+    margin-left: 20px;
+}
+
+legend {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+form {
+    border: 5px solid #FFE80C;
+    border-radius: 20px;
+    height: max-content;
+    display: grid;
+    grid-template-columns: max-content;
+    width: max-content;
+}
+
+.form-div {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+button {
+    color: black;
+    background-color: yellow;
+    border-radius: 20px;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    line-height: 20px;
+    justify-self: center;
+    padding: 15px 20px;
+    height: max-content;
+    width: max-content;
+}
