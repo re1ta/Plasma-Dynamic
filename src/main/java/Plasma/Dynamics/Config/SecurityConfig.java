@@ -20,24 +20,6 @@ public class SecurityConfig {
                 .authorizeHttpRequests((requests) -> requests
                         .antMatchers("/","/static/**","/css/**","/js/**", "/reg","/login").permitAll()
                         .anyRequest().authenticated()
-                )
-                .formLogin((form) -> form
-                        .loginPage("/login")
-                        .defaultSuccessUrl("/admin", true)
-                        .permitAll()
-                )
-                .logout((logout) -> logout.permitAll().logoutSuccessUrl("/"));
-
-        return http.build();
-    }
-
-    @Bean
-    public AuthenticationManager authenticationManager(HttpSecurity http, BCryptPasswordEncoder bCryptPasswordEncoder,
-                                                       UserDetailsService userDetailService) throws Exception {
-        return http.getSharedObject(AuthenticationManagerBuilder.class)
-                .userDetailsService(userDetailService)
-                .passwordEncoder(bCryptPasswordEncoder)
-                .and()
-                .build();
+                );        return http.build();
     }
 }
