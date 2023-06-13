@@ -1,8 +1,1 @@
-spring:
-    datasource:
-        url: postgresql://postgres:5Rdv2kbu3gzMN6NoVNjE@containers-us-west-119.railway.app:6795/railway
-        username: postgres
-        password: 5Rdv2kbu3gzMN6NoVNjE
-    jpa:
-        generate-ddl: true
-        ddl-auto: update
+
